@@ -2,24 +2,16 @@
 'use strict';
 
 
-var diff = function () {
+var diff = function (list) 
+{
+  var ansList = []
+  var previous = 0
+  list.forEach(element => {
+    ansList.push(Math.abs(element - previous))
+    previous = element
+  });
 
-  const input =[4,2,8,3,9,4,10,5,11,6];
-  const output = [4,2,6,5,6,5,6,5,6,5];
-
-  var x = 0;
-  var y = 0;
-  var ans = 0;
-  // your code goes here
-  for(var i = 0; i <= input.length; i++)
-  {
-      if(x > y );
-      {
-        ans=y-x;
-      }
-
-  }
-
+  return ansList
 }
 
 if ( typeof module !== "undefined" ) {
